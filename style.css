@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:5rem;
+    width: 5rem;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    box-shadow: 0.1rem 0.1rem 0.5rem lime;
+}
+.menu-item{
+    height: 0.5rem;
+    width: 4rem;
+    border-radius: 5rem;
+    background-color: white;
+    transition: all .5s ease-in-out;
+    box-shadow: 0.1rem 0.1rem 0.5rem lime;
+
+}
+
+.menu-item::before, .menu-item::after{
+    position: absolute;
+    content: "";
+    height: 0.5rem;
+    width: 4rem;
+    border-radius: 5rem;
+    background-color: white;
+    transition: all .5s ease-in-out;
+    box-shadow: 0.1rem 0.1rem 0.5rem lime;
+
+}
+.menu-item::before{
+    transform: translateY(-16px);
+}
+.menu-item::after{
+    transform: translateY(16px);
+}
+.open .menu-item{
+transform: translateX(-3.05rem);
+box-shadow: none;
+background: transparent;
+}
+.open .menu-item::before{
+transform: rotate(45deg) translate(35px,-35px);
+
+}
+.open .menu-item::after{
+transform: rotate(-45deg) translate(35px,35px);
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
